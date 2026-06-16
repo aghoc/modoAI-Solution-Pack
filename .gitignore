@@ -3,10 +3,15 @@ node_modules/
 .claude/
 docs/
 frontend/dist/
+firebase.json
+package-lock.json
+frontend/package-lock.json
 data/raw/
 public/data/
-public/packs/
 public/images/
+public/packs/*
+!public/packs/
+!public/packs/*.md
 
 # Local crawl test outputs
 data/raw/solutions.*-test.json
