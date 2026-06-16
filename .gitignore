@@ -1,0 +1,13 @@
+node_modules/
+.DS_Store
+.claude/
+docs/
+frontend/dist/
+data/raw/
+public/data/
+public/packs/
+public/images/
+
+# Local crawl test outputs
+data/raw/solutions.*-test.json
+data/raw/solutions.test.json

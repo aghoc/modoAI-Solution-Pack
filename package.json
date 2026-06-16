@@ -1,0 +1,22 @@
+{
+  "name": "modo-ai-solution-picker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "data:build": "node scripts/build-static-data.mjs",
+    "data:build:sample": "node scripts/build-static-data.mjs --input data/raw/solutions.sample.json",
+    "data:validate": "node scripts/validate-data.mjs",
+    "data:crawl": "node scripts/crawl-modoo.mjs",
+    "data:crawl:list": "node scripts/crawl-modoo.mjs --pages 100 --listOnly --output data/raw/solutions.list.json",
+    "data:crawl:details": "node scripts/crawl-modoo.mjs --inputList data/raw/solutions.list.json --output data/raw/solutions.json --detailWait 2500",
+    "data:refresh": "npm run data:crawl:list && npm run data:crawl:details && npm run data:build && npm run data:validate",
+    "data:all": "npm run data:build && npm run data:validate",
+    "frontend:dev": "npm --prefix frontend run dev",
+    "frontend:build": "npm --prefix frontend run build",
+    "frontend:preview": "npm --prefix frontend run preview"
+  },
+  "devDependencies": {
+    "playwright": "^1.55.0"
+  }
+}
