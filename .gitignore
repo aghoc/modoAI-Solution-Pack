@@ -1,8 +1,10 @@
 node_modules/
 .DS_Store
 .claude/
+.firebase/
 docs/
 frontend/dist/
+frontend/.env
 firebase.json
 package-lock.json
 frontend/package-lock.json
